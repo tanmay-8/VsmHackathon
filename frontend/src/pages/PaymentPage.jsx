@@ -46,8 +46,8 @@ const PaymentPage = () => {
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-200 p-6">
-            <div className="w-full max-w-md bg-white rounded-lg shadow-md p-6">
+        <div className="min-h-screen flex justify-center bg-gray-200 p-6">
+            <div className="w-full h-fit mt-12 max-w-md bg-white rounded-lg shadow-md p-6">
                 <h2 className="text-2xl font-bold mb-4">Payment Details</h2>
                 <p className="text-lg mb-4">Museum : {title}</p>
                 <p className="text-lg mb-4">Total Cost: ₹{totalCost}</p>
@@ -108,14 +108,21 @@ const PaymentPage = () => {
                             />
                         </div>
                     </div>
-                    <div className="text-right">
+                    <div className="w-full flex justify-between space-x-4">
+                        <button
+                            onClick={() => navigate(-1)}
+                            className="bg-gray-600 text-white py-2 px-4 rounded w-full"
+                        >
+                            Cancel
+                        </button>
+
                         <button
                             type="submit"
-                            className={`bg-blue-600 text-white py-2 px-4 rounded ${
+                            className={`bg-blue-600 text-white py-2 px-4 rounded w-full${
                                 loading ? "opacity-50 cursor-not-allowed" : ""
                             }`}
                         >
-                            {loading ? "Processing..." : "Pay Now"}
+                            {loading ? "Processing..." : "Book Now"}
                         </button>
                     </div>
                 </form>
