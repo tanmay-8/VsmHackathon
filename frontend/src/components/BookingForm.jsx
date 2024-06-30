@@ -139,4 +139,4 @@ const BookingForm = ({ museum, isOpen, setIsOpen }) => {
     );
 };
 
-export default BookingForm;
+export default BookingForm

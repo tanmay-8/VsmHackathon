@@ -36,7 +36,7 @@ const PaymentPage = () => {
         });
         const data = await res.json();
         if (res.ok) {
-            alert("Payment successful. Ticket booked !");
+            alert("Payment successful. Ticket booked and sent to the mail!")
             navigate("/");
         } else {
             alert("Payment failed. Please try again.");
